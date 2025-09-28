@@ -52,7 +52,7 @@ const SearchBar = () => {
         }
         else{
             const info = await response.data.results[0];  //storing first field of response
-
+            
             //Getting city name from response
             let Name = info.admin3 ? info.admin3 : info.admin2 ;
             Name = Name.toLowerCase();
@@ -84,7 +84,7 @@ const SearchBar = () => {
             
             {/* input box and search button */}
             <div ref={divRef} className="city-input">
-                <input ref={inputRef} type="text" name="city" className="city" placeholder="Enter City" autoComplete="false"/>
+                <input ref={inputRef} type="text" name="city" className="city" placeholder="Enter City" autoComplete="off"/>
                 <button onClick={(e) => getDetails(e)}>Get</button>
             </div>
         </div>

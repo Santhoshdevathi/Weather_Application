@@ -3,7 +3,6 @@ import { AppContext } from "../Context/AppContext";
 import { getToday } from "../Services/DateTimeService";
 import { formatTimeFromISO, getDaylightDuration } from "../Services/DateTimeService";
 import './Today.css';
-import Icon from "./Icon";
 
 
 const Today = (props) => {

@@ -9,8 +9,8 @@ const Weakly = () => {
     const dates = weatherDetails.daily.time;
 
     //Seperating past days and future days
-    const past_dates = dates.slice(0,6);
-    const future_dates = dates.slice(7,13);
+    const past_dates = dates.slice(1,7);
+    const future_dates = dates.slice(8,14);
 
     //For Storing specific date
     const [specific,setSpecific] = useState(); 

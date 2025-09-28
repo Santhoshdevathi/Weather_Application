@@ -11,7 +11,8 @@ import {
   faCloudSunRain,
   faSnowflake,
   faBolt,
-  faMoon
+  faMoon,
+  faCloudMoon
 } from "@fortawesome/free-solid-svg-icons";
 
 

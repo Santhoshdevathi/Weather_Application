@@ -21,13 +21,13 @@ const App = () => {
   useEffect(() => {
     
       const hour = new Date().getHours();
-      if(hour < 6 || hour > 19){      // To set theme basd on System time
+      if(hour < 6 || hour >= 19){      // To set theme basd on System time
         setTheme("dark-theme");
       }
       else{
        setTheme("light-theme");
       }
-
+      
       appRef.current.classList.add(theme);
   
   },[]);
