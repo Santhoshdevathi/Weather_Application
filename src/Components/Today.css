@@ -1,0 +1,59 @@
+.today{
+    border: 1px solid;
+    margin: 30px;
+    padding: 20px;
+    
+}
+
+.today .properties{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.light-theme .today{
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+}
+
+.dark-theme .today{
+    background: rgba(200, 200, 200, 0.05); 
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: #eee;
+    margin: 20px;
+}
+
+
+
+/* 📱 Mobile screens */
+@media (max-width: 480px) {
+  .contains .today {
+    width: 90%;       /* take almost full width */
+    margin: 15px auto;
+    padding: 0px;
+  }
+
+  h4,p{
+    text-align: center;
+  }
+
+  .contains .today .properties {
+    flex-direction: column;   /* stack properties vertically */
+    gap: 5px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.1) transparent;
+    overflow-y: auto;
+    height: 200px;
+    align-self: center;
+  }
+}

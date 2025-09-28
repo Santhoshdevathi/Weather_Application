@@ -1,0 +1,131 @@
+.current-temperature{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    
+}
+
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-self: flex-start;
+    height: 100px;
+    gap: 30px;
+    
+}
+
+.current-temperature div{
+    margin: 10px;
+}
+
+.temperature{
+    font-size: 60px;
+}
+
+.temp-unit{
+    font-size: 40px;
+    margin-left: -10px;
+    vertical-align: top;
+}
+
+.current .properties{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 30px;
+    height: 70px;
+    align-self: flex-start;
+    scrollbar-width: thin;
+}
+
+.light-theme .current{
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+}
+
+.dark-theme .current{
+    background: rgba(200, 200, 200, 0.05); 
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: #eee;
+    margin: 20px;
+}
+
+/* 📱 Mobile devices (max 480px) */
+@media (max-width: 480px) {
+
+  .current{
+    width: 90%;
+  }
+  
+  .current-temperature {
+    flex-direction: column;   /* stack elements */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .temp {
+    flex-direction: column;   /* stack number + unit vertically */
+    height: auto;
+    gap: 10px;
+    align-self: center;
+  }
+
+  .temperature {
+    font-size: 36px;          /* shrink big number */
+  }
+
+  .temp-unit {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .current .properties {
+    flex-direction: column;   /* stack properties vertically */
+    gap: 5px;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+    justify-content: flex-start;
+    scrollbar-color: rgba(0,0,0,0.1) transparent;
+    overflow-y: auto;
+    height: 200px;
+    align-self: center;
+  }
+
+  .light-theme .current,
+  .dark-theme .current {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+/* 📱 Tablets (481px – 768px) */
+@media (max-width: 768px) {
+  .temperature {
+    font-size: 48px;   /* slightly smaller than desktop */
+  }
+
+  .temp-unit {
+    font-size: 28px;
+  }
+
+  .properties {
+    gap: 20px;
+  }
+
+  .light-theme .current,
+  .dark-theme .current {
+    margin: 15px;
+    padding: 18px;
+  }
+}

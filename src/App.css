@@ -1,0 +1,126 @@
+.App{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction : column;
+    min-height: 100vh;
+    
+}
+
+.sun-moon {
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+  transition: background-color 0.5s ease;
+}
+
+/* Sun in light theme */
+.light-theme .sun-moon {
+  background: radial-gradient(circle, #FFD700 70%, #FFA500 100%);
+  box-shadow: 0 0 30px #FFD700;
+  
+}
+
+/* Moon in dark theme */
+.dark-theme .sun-moon {
+    background: radial-gradient(circle, #cfcfcf 70%, #aaaaaa 100%);
+    box-shadow: 0 0 100px #cfcfcf;
+  }
+
+.light-theme {
+   position: relative;
+  background-image: url('/sky.jpg');
+  background-size: cover;      /* makes the image cover entire container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  color: #222;
+  overflow: hidden;
+}
+
+
+
+.dark-theme{
+    background: linear-gradient(#0d0d2b, #1a1a40);
+    color: white;
+}
+
+.toggle-btn{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.light-theme .toggle-btn{
+    color: black;
+    
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .App {
+    padding: 0.5rem;
+    min-height: auto; /* avoid extra empty space */
+  }
+
+  .contains{
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .light-theme .sun-moon,
+  .dark-theme .sun-moon {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    transform: translateX(-50%); /* center on small screen */
+    width: 60px;
+    height: 60px;
+  }
+
+  .toggle-btn {
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* 📱 Tablets (481px – 768px) */
+@media (max-width: 768px) {
+  .sun-moon {
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .toggle-btn {
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
